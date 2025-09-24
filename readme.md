@@ -56,7 +56,7 @@ Equipment maintenance management.
 
 ## Representation
 
-![ERD of the DB Office](ERD-OFFICE1.png)
+<img width="1367" height="787" alt="ERD-OFFICE1" src="https://github.com/user-attachments/assets/cc105409-c6f3-4ebd-857b-af5f3a151f43" />
 
 
 ### Entities
