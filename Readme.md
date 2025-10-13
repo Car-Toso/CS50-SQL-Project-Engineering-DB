@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="Assets/CS50s-Banner.png" alt="CS50 SQL Project Banner" width="100%" height="180"/>
+  <img src="Assets/CS50sBanner.png" alt="CS50 SQL Project Banner" width="100%" />
 </p>
-
 
 # 🏗️ Design Document
 
