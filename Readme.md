@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="Assets/CS50s_Banner.png" alt="CS50 SQL Banner" width="800"/>
+</p>
+
 # 🏗️ Design Document
 
 By Carlos Tosoratto
