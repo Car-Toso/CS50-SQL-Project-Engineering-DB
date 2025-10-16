@@ -2,7 +2,7 @@
   <img src="Assets/CS50sBanner.png" alt="CS50 SQL Project Banner" width="100%" />
 </p>
 
-# 🏗️ Design Document
+# Design Document 🏗️
 
 By Carlos Tosoratto
 
@@ -10,9 +10,17 @@ Video overview:
 
 [Final Project Presentation](https://youtu.be/bjtHTrzuTDg)
 
-   [![YouTube](https://img.shields.io/badge/YouTube-FC0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/bjtHTrzuTDg)   
+   [![YouTube](https://img.shields.io/badge/YouTube-FC0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/bjtHTrzuTDg)
 
-## 🎯 Scope
+1. [Scope 🎯](#1scope)
+2. [Functional Requirements 🛠️](#2functional-requirements️)
+3. [Representation 🧩](#3representation)
+4. [Entities 🗂️](#4entities️)
+5. [Relationships 🔗](#5relationships)
+6. [Optimizations ⚡](#6optimizations)
+7. [Limitations ⚠️](#7limitations️)
+
+##  **1.Scope**🎯
 
 In this section you should answer the following questions:
 
@@ -22,15 +30,15 @@ The purpose of this database is to manage the operations of an engineering consu
 
 #### **Which people, places, things, etc. are you including in the scope of your database?**
 
-**👩‍👩‍👧‍👦 PEOPLE:** 
+**PEOPLE:👩‍👩‍👧‍👦** 
 - Staff: engineers, project managers, welder, etc.
 - Clients: companies or individuals hiring engineering services.
 - Contacts: specific people linked to each client.
 
-**🕌 PLACES:** 
+**PLACES:🕌** 
 - Projects: locations, including addresses and cities.
 
-**📋 THINGS:**
+**THINGS:📋 **
 - Budgets: quotations for proposed work, including status tracking.
 - Equipments: physical tools or machines used in projects.
 - Assignments: which staff and equipment are involved in each project.
@@ -44,7 +52,7 @@ The purpose of this database is to manage the operations of an engineering consu
 - Client satisfaction.
 - Attendance or time-tracking (e.g., clock-in/clock-out).
 
-## 🛠️ Functional Requirements
+## **2.Functional Requirements**🛠️
 
 In this section you should answer the following questions:
 
@@ -61,14 +69,13 @@ In this section you should answer the following questions:
 - Complex financial accounting unrelated to project budgets.
 - Equipment maintenance management.
 
-## Representation
+## **3.Representation**🧩
 
 <p align="center">
   <img src="Assets/ERD-OFFICE1.png" alt="ERD OFFICE1" width="800"/>
 </p>
 
-
-## 🗂️Entities
+## **4.Entities**🗂️
 
 In this section you should answer the following questions:
 
@@ -99,14 +106,14 @@ Foreign keys for relationships (e.g., staff_project references staff and project
 Not null constraints for mandatory fields (e.g., assigned_hours).
 Default values where appropriate (e.g., activo = TRUE).
 
-## 🔗Relationships
+## **5.Relationships**🔗
 
 A client can have multiple contacts and multiple projects.
 Each project has one budget but may have multiple budget revisions (status tracked).
 Staff can be assigned to multiple projects and track hours per project.
 Equipment can be assigned to multiple projects with specific assignment periods and hours.
 
-## ⚡Optimizations
+## **6.Optimizations**⚡
 
 In this section you should answer the following questions:
 
@@ -116,11 +123,11 @@ In this section you should answer the following questions:
 These optimizations improve query performance and make reporting easier for end users.
 
 
-## ⚠️Limitations
+## **7.Limitations**⚠️
 
 In this section you should answer the following questions:
 
-#### ** What are the limitations of your design?**
+#### **What are the limitations of your design?**
 #### **What might your database not be able to represent very well?**
 While this database provides a solid structure for managing an engineering consulting firm, it has some limitations:
 Financial operations beyond budgets – The system does not handle payroll, invoices, taxes, or other financial transactions outside of project budgets.
