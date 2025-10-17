@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Assets/CS50sBanner.png" alt="CS50 SQL Project Banner" width="100%" />
+  <img src="Assets/CS50sBanner.png" alt="CS50 SQL Project Banner" style="height:50%; max-height:300px; width:auto;" />
 </p>
 
 # Design Document 🏗️
