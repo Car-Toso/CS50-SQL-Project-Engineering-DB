@@ -102,6 +102,11 @@ BEGIN
     WHERE id = OLD.id;
 END;
 
+
+
+
+
+
 -- INDEXES
 -- STAFF
 CREATE INDEX idx_staff_last_name ON staff(last_name);
@@ -132,6 +137,9 @@ CREATE INDEX idx_equipment_project_project_id ON equipment_project(project_id);
 --EQUIPMENT
 CREATE INDEX idx_equipments_name ON equipments(name);
 CREATE INDEX idx_equipments_active ON equipments(active);
+
+
+
 
 
 -- VIEWS

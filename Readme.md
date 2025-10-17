@@ -6,19 +6,24 @@
 
 By Carlos Tosoratto
 
-Video overview:
+Video overview: [![YouTube](https://img.shields.io/badge/YouTube-FC0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/bjtHTrzuTDg)
 
-[![Final Project Presentation](https://img.youtube.com/vi/bjtHTrzuTDg/0.jpg)](https://youtu.be/bjtHTrzuTDg)
-
-   [![YouTube](https://img.shields.io/badge/YouTube-FC0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/bjtHTrzuTDg)
-
+<p align="center">
+  <a href="https://youtu.be/bjtHTrzuTDg" target="_blank">
+    <img src="https://img.youtube.com/vi/bjtHTrzuTDg/0.jpg" alt="Final Project Presentation" width="600"/>
+  </a>
+</p>
+ 
 1. [Scope 🎯](#1scope)
 2. [Functional Requirements 🛠️](#2functional-requirements️)
-3. [Representation 🧩](#3representation)
-4. [Entities 🗂️](#4entities️)
+3. [Database Design and Representation 🧩](#3database-design-and-representation)
+4. [Entities and Attributes 🗂️](#4entities-and-attributes️)
 5. [Relationships 🔗](#5relationships)
-6. [Optimizations ⚡](#6optimizations)
-7. [Limitations ⚠️](#7limitations️)
+6. [Optimizations and Indexing ⚙️](#6optimizations-and-indexing)
+7. [Sample Queries and Use Cases 📊](#7-sample-queries-and-use-cases-)
+8. [Integration with Power BI 📈](#8-integration-with-power-bi-)
+9. [Key Findings ⭐](#9-key-findings-)
+10. [Limitations and Future Improvements ⚠️](#10-limitations-and-future-improvements-️)
 
 ##  **1.Scope**🎯
 
@@ -69,13 +74,16 @@ In this section you should answer the following questions:
 - Complex financial accounting unrelated to project budgets.
 - Equipment maintenance management.
 
-## **3.Representation**🧩
+## **3.Database Design and Representation**🧩
+
+The complete database schema, including table creation scripts, primary and foreign key definitions, can be found in the following file:  
+➡️ [SQL Schema](Sql/schema.sql#L1)
 
 <p align="center">
   <img src="Assets/ERD-OFFICE1.png" alt="ERD OFFICE1" width="800"/>
 </p>
 
-## **4.Entities**🗂️
+## **4.Entities and Attributes**🗂️
 
 In this section you should answer the following questions:
 
@@ -113,17 +121,60 @@ Each project has one budget but may have multiple budget revisions (status track
 Staff can be assigned to multiple projects and track hours per project.
 Equipment can be assigned to multiple projects with specific assignment periods and hours.
 
-## **6.Optimizations**⚡
+## **6.Optimizations, Triggers and Views**⚙️
 
 In this section you should answer the following questions:
 
 #### **Which optimizations (e.g., indexes, views) did you create? Why?**
-- Indexes: Created on foreign key columns and frequently queried fields to speed up joins (e.g., project_id in staff_project).
-- Views: Created views such as project_overview to consolidate project, client, staff, and budget information for reporting in Power BI.
-These optimizations improve query performance and make reporting easier for end users.
+
+#### **Indexes**
+Created on foreign key columns and frequently queried fields to improve join and filter performance.  
+Example: `project_id` in `staff_project` and `client_id` in `projects`.
+Access the full project index by clicking this link.
+➡️ [SQL Schema](Sql/schema.sql#L110)
+
+#### **Views**
+Developed views like `project_overview` to consolidate information from multiple tables (projects, clients, staff, budgets).
+Access the full project views by clicking this link.
+➡️ [SQL Schema](Sql/schema.sql#L145) 
+
+These are primarily used for reporting and exporting to Power BI.
 
 
-## **7.Limitations**⚠️
+#### **Triggers**
+Implemented automation rules to maintain data integrity.  
+Example: a *soft delete trigger* in the `staff` table that sets `activo = FALSE` instead of permanently deleting records.
+Together, these optimizations improve database performance, maintain consistency, and simplify analytical workflows.
+Access the triggers by clicking this link.
+➡️ [SQL Schema](Sql/schema.sql#L95)
+
+## 7. **Sample Queries and Use Cases** 📊
+For a full set of queries, views, and triggers with example outputs, please refer to the project presentation PDF:  
+➡️ [Project Presentation](CS50_Introduction_to_Databases_with_SQL.pdf)
+
+## 8. **Integration with Power BI** 📈
+
+>⚠️ This section is under development and will be completed in a future update.  
+>It will demonstrate how the SQL database integrates with Power BI for reporting and visualization.
+
+## 9. **Key Findings** ⭐
+
+1. **Project Status📌**
+    - Out of 10 projects, 6 have been completed, 2 are in progress, and 2 are pending.
+2. **Budget Performance💰**
+    - 4 projects exceeded their estimated budget (over budget), while 6 projects were under budget. Overall, the total budget variance is +5,000 USD.
+3. **Staff Workload🧑‍💼**
+    - Lucas Fernandez has been assigned 365 hours, 32% more than the next highest employee.
+4. **Team Allocation🛠️**
+    - The “Laser Measurement System” team has the highest hours assigned to active projects (90 hours); it may be worth evaluating the addition of another team.
+5. **Client Activity:**
+    - Foodies Inc is the client with the most projects, totaling 3 active projects.
+6. **Simultaneous Project Assignment:**
+    - Javier Sanchez and Lucas Fernandez are each working on 2 projects simultaneously, which is manageable.
+7. **Projects Over Budget:**
+    - 6 projects have exceeded their allocated budgets, with a total overrun of 18,000 USD.
+
+## 10. **Limitations and Future Improvements** ⚠️
 
 In this section you should answer the following questions:
 
