@@ -8,7 +8,7 @@ By Carlos Tosoratto
 
 Video overview:
 
-[Final Project Presentation](https://youtu.be/bjtHTrzuTDg)
+[![Final Project Presentation](https://img.youtube.com/vi/bjtHTrzuTDg/0.jpg)](https://youtu.be/bjtHTrzuTDg)
 
    [![YouTube](https://img.shields.io/badge/YouTube-FC0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/bjtHTrzuTDg)
 
