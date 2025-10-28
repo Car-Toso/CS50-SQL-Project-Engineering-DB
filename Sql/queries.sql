@@ -168,5 +168,3 @@ FROM projects p
 JOIN budgets b ON p.budget_id = b.id
 WHERE p.amount > b.budget
 ORDER BY variance DESC;
-
-
