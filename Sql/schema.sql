@@ -54,6 +54,7 @@ CREATE TABLE projects (
     amount REAL,
     start_date DATE,
     end_date DATE,
+    status DATE,
     FOREIGN KEY (client_id) REFERENCES clients(id),
     FOREIGN KEY (contact_id) REFERENCES contacts(id),
     FOREIGN KEY (budget_id) REFERENCES budgets(id)
@@ -132,7 +133,7 @@ CREATE INDEX idx_projects_budget_id ON projects(budget_id);
 CREATE INDEX idx_staff_project_project_id ON staff_project(project_id);
 
 --EQUIPMENT PROJECT
-CREATE INDEX idx_equipment_project_project_id ON equipment_project(project_id);
+CREATE INDEX idx_equipment_project_project_id ON equipments_project(project_id);
 
 --EQUIPMENT
 CREATE INDEX idx_equipments_name ON equipments(name);
